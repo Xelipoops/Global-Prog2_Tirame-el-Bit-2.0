@@ -26,4 +26,12 @@ public class Sucursal {
     public void addDomicilio(Domicilio domicilio){
         this.domicilio = domicilio;
     }
+
+    public void addCategoria(Categoria categorias){
+        this.categorias.add(categorias);
+    }
+
+    public void addPromocion(Promocion promocion){
+        this.promociones.add(promocion);
+    }
 }

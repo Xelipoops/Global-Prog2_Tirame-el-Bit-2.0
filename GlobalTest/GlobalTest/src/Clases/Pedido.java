@@ -16,11 +16,24 @@ public class Pedido {
     private TipoEnvio tipoEnvio;
     private LocalDate FechaPedido;
 
-    public Pedido(FormaPago formaPago) {
-        this.formaPago = formaPago;
-    }
-
     private Domicilio domicilio; //⬜
     private Sucursal sucursal; //⬜
     private Factura factura; //⬜
+
+    public Pedido(LocalTime horaEstimadaFinalizacion, double total, double totalCosto, LocalDate fechaPedido, Sucursal sucursal, Domicilio domicilio,FormaPago formaPago, TipoEnvio tipoEnvio, Cliente cliente, DetallePedido detallePedido) {
+        this.horaEstimadaFinalizacion = horaEstimadaFinalizacion;
+        this.total = total;
+        this.totalCosto = totalCosto;
+        FechaPedido = fechaPedido;
+        this.sucursal = sucursal;
+        this.domicilio = domicilio;
+        this.formaPago = formaPago;
+        this.tipoEnvio = tipoEnvio;
+        cliente.addPedido(this);
+        detallePedido.addPedido(this);
+    }
+
+    public void addFacturas(Factura factura){
+        this.factura = factura;
+    }
 }

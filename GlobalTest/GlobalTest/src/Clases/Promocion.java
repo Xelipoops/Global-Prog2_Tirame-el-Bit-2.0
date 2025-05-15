@@ -19,4 +19,19 @@ public class Promocion {
 
     private ArrayList<Imagen> imagenes; // ⬜
     private ArrayList<Articulo> articulos;//⬜
+
+    public Promocion(String denominacion, LocalDate fechaDesde, LocalDate fechaHasta, LocalTime horaDesde, LocalTime horaHasta, String descripcionDescuento, double precioPromocional, Sucursal sucursal) {
+        this.denominacion = denominacion;
+        FechaDesde = fechaDesde;
+        FechaHasta = fechaHasta;
+        HoraDesde = horaDesde;
+        HoraHasta = horaHasta;
+        this.descripcionDescuento = descripcionDescuento;
+        this.precioPromocional = precioPromocional;
+        sucursal.addPromocion(this);
+    }
+
+    public void addImagen(Imagen imagen){
+        this.imagenes.add(imagen);
+    }
 }
