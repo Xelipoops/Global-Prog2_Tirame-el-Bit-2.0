@@ -6,7 +6,7 @@ public class ArticuloManufacturadoDetalle {
 
     public ArticuloManufacturadoDetalle(int cantidad, ArticuloManufacturado articuloManufacturado) {
         this.cantidad = cantidad;
-        articuloManufacturado.addArticuloManufacturadoDetalle(articuloManufacturado);
+        articuloManufacturado.addArticuloManufacturadoDetalle(this);
     }
 
     public void addArticuloInsumo(ArticuloInsumo articuloInsumo){
