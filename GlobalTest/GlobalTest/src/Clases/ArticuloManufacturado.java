@@ -9,7 +9,7 @@ public class ArticuloManufacturado extends Articulo {
     private String descripcion;
     private int tiempoEstimadoMinutos;
     private String preparacion;
-    private ArrayList<ArticuloManufacturadoDetalle> detalles_del_articulo_manufacturado; //⬜
+    private ArrayList<ArticuloManufacturadoDetalle> detalles_del_articulo_manufacturado = new ArrayList<>(); //⬜
 
     public ArticuloManufacturado(String denominacion, Double precioVenta, UnidadMedida unidadMedida, DetallePedido detallePedido, String descripcion, int tiempoEstimadoMinutos, String preparacion) {
         super(denominacion, precioVenta, unidadMedida, detallePedido);

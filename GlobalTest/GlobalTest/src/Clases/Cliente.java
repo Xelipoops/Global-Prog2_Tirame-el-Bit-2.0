@@ -17,8 +17,8 @@ public class Cliente {
 
     private Imagen imagen;//⬜
     private Usuario usuario;//⬜
-    private ArrayList<Pedido> pedidos;//⬜
-    private ArrayList<Domicilio> domicilios;//⬜
+    private ArrayList<Pedido> pedidos = new ArrayList<>();//⬜
+    private ArrayList<Domicilio> domicilios = new ArrayList<>();//⬜
 
     public Cliente(String nombre, String apellido, String telefono, String email, LocalDate fechaNacimiento) {
         this.nombre = nombre;

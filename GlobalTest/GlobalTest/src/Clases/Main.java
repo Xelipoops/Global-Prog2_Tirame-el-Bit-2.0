@@ -60,11 +60,6 @@ public class Main {
        ArticuloInsumo articuloInsumo1 = new ArticuloInsumo("Algo", 2.0, unidadMedida1, detallePedido1, 20.0, 10, 20, true, articuloManufacturadoDetalle1);
        ArticuloInsumo articuloInsumo2 = new ArticuloInsumo("asd", 10.0, unidadMedida2, detallePedido2, 250.0, 140, 220, false,articuloManufacturadoDetalle2);
 
-
-
-
-
-
     }
 
 }

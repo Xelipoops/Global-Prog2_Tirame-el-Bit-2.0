@@ -17,8 +17,8 @@ public class Promocion {
     private double precioPromocional;
     private TipoPromocion tipoPromocion;
 
-    private ArrayList<Imagen> imagenes; // ⬜
-    private ArrayList<Articulo> articulos;//⬜
+    private ArrayList<Imagen> imagenes = new ArrayList<>(); // ⬜
+    private ArrayList<Articulo> articulos = new ArrayList<>();//⬜
 
     public Promocion(String denominacion, LocalDate fechaDesde, LocalDate fechaHasta, LocalTime horaDesde, LocalTime horaHasta, String descripcionDescuento, double precioPromocional, Sucursal sucursal) {
         this.denominacion = denominacion;
