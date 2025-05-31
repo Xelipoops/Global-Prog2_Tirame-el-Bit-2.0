@@ -1,13 +1,19 @@
 package Clases;
 
-public class Imagen {
+public class Imagen{
     private String denominacion;
 
-    public Imagen(String denominacion, Promocion promocion,Articulo articulo, Cliente cliente) {
+    public Imagen(String denominacion) {
         this.denominacion = denominacion;
-        promocion.addImagen(this);
-        articulo.addImagen(this);
-        cliente.addImagen(this);
+    }
+
+    public String getDenominacion() {
+        return denominacion;
+    }
+
+    public void setDenominacion(String denominacion) {
+        this.denominacion = denominacion;
     }
 }
+
 

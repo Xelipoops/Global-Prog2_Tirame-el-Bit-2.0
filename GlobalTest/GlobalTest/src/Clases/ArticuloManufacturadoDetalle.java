@@ -1,15 +1,27 @@
 package Clases;
 
-public class ArticuloManufacturadoDetalle {
+public class ArticuloManufacturadoDetalle{
     private int cantidad;
     private ArticuloInsumo articuloInsumo;//⬜
 
-    public ArticuloManufacturadoDetalle(int cantidad, ArticuloManufacturado articuloManufacturado) {
+    public ArticuloManufacturadoDetalle(int cantidad, ArticuloInsumo articuloInsumo) {
         this.cantidad = cantidad;
-        articuloManufacturado.addArticuloManufacturadoDetalle(this);
+        this.articuloInsumo = articuloInsumo;
     }
 
-    public void addArticuloInsumo(ArticuloInsumo articuloInsumo){
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public ArticuloInsumo getArticuloInsumo() {
+        return articuloInsumo;
+    }
+
+    public void setArticuloInsumo(ArticuloInsumo articuloInsumo) {
         this.articuloInsumo = articuloInsumo;
     }
 }

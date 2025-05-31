@@ -1,10 +1,17 @@
 package Clases;
 
-public class Pais {
+public class Pais{
     private  String nombre;
 
-    public Pais(String nombre,Provincia provincia) {
+    public Pais(String nombre) {
         this.nombre = nombre;
-        provincia.addPais(this);
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }

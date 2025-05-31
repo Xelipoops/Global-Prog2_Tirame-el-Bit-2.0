@@ -1,15 +1,28 @@
 package Clases;
 
-public class Localidad {
+public class Localidad{
     private String nombre;
     private Provincia provincia;
 
-    public Localidad(String nombre, Domicilio domicilio) {
+    public Localidad(String nombre, Provincia provincia) {
         this.nombre = nombre;
-        domicilio.addLocalidad(this);
+        this.provincia = provincia;
     }
 
-    public void addProvincia(Provincia provincia){
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Provincia getProvincia() {
+        return provincia;
+    }
+
+    public void setProvincia(Provincia provincia) {
         this.provincia = provincia;
     }
 }
+

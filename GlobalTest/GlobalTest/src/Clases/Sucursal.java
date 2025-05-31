@@ -7,7 +7,7 @@ import java.util.ArrayList;
 //Sucursal → (1)Domicilio
 //Sucursal → (*)Categorias
 
-public class Sucursal {
+public class Sucursal{
     private String nombre;
     private LocalTime HorarioApertura;
     private LocalTime HorarioCierre;
@@ -15,23 +15,60 @@ public class Sucursal {
     private ArrayList<Promocion> promociones = new ArrayList<>(); //⬜
     private ArrayList<Categoria> categorias = new ArrayList<>();//⬜
 
-    public Sucursal(String nombre, Empresa empresa) {
+    public Sucursal(String nombre, Domicilio domicilio, Promocion promocion, Categoria categoria) {
         this.nombre = nombre;
         HorarioApertura = LocalTime.now();
         HorarioCierre = LocalTime.now();
-        empresa.addSucursal(this);
-
+        this.domicilio = domicilio;
+        this.promociones.add(promocion);
+        this.categorias.add(categoria);
     }
 
-    public void addDomicilio(Domicilio domicilio){
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public LocalTime getHorarioApertura() {
+        return HorarioApertura;
+    }
+
+    public void setHorarioApertura(LocalTime horarioApertura) {
+        HorarioApertura = horarioApertura;
+    }
+
+    public LocalTime getHorarioCierre() {
+        return HorarioCierre;
+    }
+
+    public void setHorarioCierre(LocalTime horarioCierre) {
+        HorarioCierre = horarioCierre;
+    }
+
+    public Domicilio getDomicilio() {
+        return domicilio;
+    }
+
+    public void setDomicilio(Domicilio domicilio) {
         this.domicilio = domicilio;
     }
 
-    public void addCategoria(Categoria categorias){
-        this.categorias.add(categorias);
+    public ArrayList<Promocion> getPromociones() {
+        return promociones;
     }
 
-    public void addPromocion(Promocion promocion){
-        this.promociones.add(promocion);
+    public void setPromociones(Promocion promociones) {
+        this.promociones.add(promociones);
+    }
+
+    public ArrayList<Categoria> getCategorias() {
+        return categorias;
+    }
+
+    public void setCategorias(Categoria categorias) {
+        this.categorias.add(categorias);
     }
 }
